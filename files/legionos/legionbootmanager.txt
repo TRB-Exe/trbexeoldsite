@@ -1,0 +1,12 @@
+LEGION OS BOOT
+{PIXELONE}
+<Sctipt>
+{
+bootfile={legionbootmanager.txt}
+boot=system{pixel one}
+version-85
+start(system) from volume:{"sda1/root/system/boot/boot.legionboot
+(end)
+}
+
+# system
