@@ -19,7 +19,11 @@ body {
 }
   
 .material-icons.md-18 { font-size: 18px; }
-  
+
+.footertext{
+color: white;
+}
+
 .topnav {
   overflow: hidden;
   background-color: #32393f;
@@ -47,12 +51,31 @@ body {
 </head>
 <body>
   
+<script type="text/javascript">
+timeend= new Date();
+timeend= new Date(timeend.getYear()>1900?(timeend.getYear()+1):(timeend.getYear()+1901),0,1);
+// для задания обратного отсчета до определенной даты укажите дату в формате:
+// timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ);
+// Для задания даты с точностью до времени укажите дату в формате:
+// timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ, ЧАСЫ-1, МИНУТЫ);
+function time() {
+	today = new Date();
+	today = Math.floor((timeend-today)/1000);
+	tsec=today%60; today=Math.floor(today/60); if(tsec<10)tsec='0'+tsec;
+	tmin=today%60; today=Math.floor(today/60); if(tmin<10)tmin='0'+tmin;
+	thour=today%24; today=Math.floor(today/24);
+	timestr=today +" дней "+ thour+" часов "+tmin+" минут "+tsec+" секунд";
+	document.getElementById('t').innerHTML=timestr;
+	window.setTimeout("time()",1000);
+}
+</script>
+<body onload="time()">
+
+
 <div class="topnav">
   <a class="active" href="index"><span class="material-icons md-18">home</span></a>
   <a href="news"><span class="material-icons md-18">feed</span></a>
-  <a href="social_links"><span class="material-icons md-18">link</span></a>
   <a href="files.html"><span class="material-icons md-18">folder</span></a>
-  <a href="https://trbexe.ml/chat"><span class="material-icons md-18">message</span></a>
   <a href="https://trbexe.ml/old/"><span class="material-icons md-18">inventory_2</span></a>
 </div>
   
@@ -61,9 +84,9 @@ body {
   <h2>Сайт T_R_B</h2>
   <p>Да новая версия сайта. А что? Но сайт все ещё в разработке</p>
 <p>Что тут мне написать? Но это новая версия сайта, улучшенная.</p>
+
 <center><p>Просто ссылки</p><center>
 <center><a href="https://trbexe.ml/discord"><span class="material-icons md-18">discord</span></a></center>
-<center><a href="https://t.me/trbexe"><span class="material-icons md-18">telegram</span></a></center>
 </div>
 
 </body>
