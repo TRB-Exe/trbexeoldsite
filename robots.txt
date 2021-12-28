@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /downloads
-Disallow: /chat.html
+Disallow: /bebra.html
+Disallow: /files
