@@ -26,6 +26,19 @@ color: white;
   font-size: 17px;
 }
 
+.textlogo {
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  text-shadow: -5px -5px 0px #5865F2;
+  background: radial-gradient(#EB459E 1px, transparent 1px);
+  background-size: 4px 4px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: table;
+  margin: 20px auto;
+}
+
 .topnav a:hover {
   background-color: #ddd;
   color: black;
